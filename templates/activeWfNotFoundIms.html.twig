@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link href="{{ asset('admin/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+</head>
+<body>
+<link href="{{ asset('admin/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+<link href="{{ asset('admin/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+<div class="container-fluid">
+
+    <h1>Client exist WorkFlow et non-exist IMS</h1>
+    <br>
+    <button id="res1" type="button" class="btn btn-primary"><a style="color: #fff" href="{{ path('pdfFliterTwo') }}">Download Pdf</a></button>
+
+    <table class="table table-hover table-dark">
+        <thead>
+        <tr>
+            <th scope="col">client</th>
+            <th scope="col">n_Appel</th>
+            <th scope="col">etat</th>
+            <th scope="col">fixe</th>
+            <th scope="col">id_Contrat</th>
+            <th scope="col">position</th>
+            <th scope="col">offre</th>
+            <th scope="col">nature_service</th>
+            <th scope="col">debit</th>
+            <th scope="col">central</th>
+            <th scope="col">fsi</th>
+            <th scope="col">date_mesTT</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for activeWfNotFoundNce in activeWfNotFoundNce %}
+            <tr>
+                <td>{{ activeWfNotFoundNce.client }}</td>
+                <td>{{ activeWfNotFoundNce.n_Appel }}</td>
+                <td>{{ activeWfNotFoundNce.etat }}</td>
+                <td>{{ activeWfNotFoundNce.fixe }}</td>
+                <td>{{ activeWfNotFoundNce.id_Contrat }}</td>
+                <td>{{ activeWfNotFoundNce.position }}</td>
+                <td>{{ activeWfNotFoundNce.offre }}</td>
+                <td>{{ activeWfNotFoundNce.nature_service }}</td>
+                <td>{{ activeWfNotFoundNce.debit }}</td>
+                <td>{{ activeWfNotFoundNce.central }}</td>
+                <td>{{ activeWfNotFoundNce.fsi }}</td>
+                <td>{{ activeWfNotFoundNce.date_mesTT }}</td>
+
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+<button id="res" type="button" class="btn btn-primary"><a style="color: #fff" href="{{ path('landing') }}">Home Page</a></button>
+</body>
+<style>
+    body{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{ asset('admin/img/Tunisie-télécom.jpg') }});
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+
+    }
+    #res{
+        position: fixed;
+        right: 0px;
+        top: 800px;
+        font-size: 20px;
+        border: 2px solid  #0076d762;
+        padding-left: 8px;
+        padding-right: 8px;
+        background-color: #0076d7;
+        border-radius: 5px;
+        color:#fff;
+        transition: 0.3ms ease;
+    }
+    #res:hover{
+        margin-right: 0px;
+        padding-left: 25px;
+        padding-right: 25px;
+
+    }
+    a{
+        text-decoration: none;
+    }
+</style>
+</html>

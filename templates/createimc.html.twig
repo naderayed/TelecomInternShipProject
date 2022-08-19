@@ -1,0 +1,135 @@
+{% extends 'base-admin.html.twig' %}
+{% block body %}
+
+    <main id="main" class="main">
+        <section class="section">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h1 class="card-title">Ajouter  </h1>
+                            {{ form_start(form,{'attr': {'novalidate': 'novalidate'}}) }}
+
+                            <div class="form-control">
+                                <label for="foo">abonne</label>
+                                {{ form_widget(form.abonne,{ 'attr': {'class': 'foo'} }) }}
+                                <small id='errorMsg'> {{ form_errors(form.abonne) }}</small>
+                                <small>{{ form_help(form.abonne) }}</small>
+
+                            </div>
+                            <div class="form-control">
+                                <label for="foo">fixe</label>
+                                {{ form_widget(form.fixe,{ 'attr': {'class': 'foo'} }) }}
+                                <small id='errorMsg'>  {{ form_errors(form.fixe) }}</small>
+                                <small>{{ form_help(form.fixe) }}</small>
+
+                            </div>
+
+                            <div class="form-control">
+                                <label for="foo">uls</label>
+                                {{ form_widget(form.uls,{ 'attr': {'class': 'foo'} }) }}
+                                <small id='errorMsg'>  {{ form_errors(form.uls) }}</small>
+                                <small>{{ form_help(form.uls) }}</small>
+
+                            </div>
+
+                            <div class="form-control">
+                                <label for="foo">rg</label>
+                                {{ form_widget(form.rg,{ 'attr': {'class': 'foo'} }) }}
+                                <small id='errorMsg'> {{ form_errors(form.rg) }}</small>
+                                <small>{{ form_help(form.rg) }}</small>
+
+                            </div>
+                            <div class="form-control">
+                                <label for="foo">sr</label>
+                                {{ form_widget(form.sr,{ 'attr': {'class': 'foo'} }) }}
+                                <small id='errorMsg'>  {{ form_errors(form.sr) }}</small>
+                                <small>{{ form_help(form.sr) }}</small>
+
+                            </div>
+                            <div class="form-control">
+                                <label for="foo">adresse</label>
+                                {{ form_widget(form.adresse,{ 'attr': {'class': 'foo'} }) }}
+                                <small id='errorMsg'> {{ form_errors(form.adresse) }}</small>
+                                <small>{{ form_help(form.adresse) }}</small>
+                            </div>
+
+                            <div class="form-control">
+                                <label for="foo">type</label>
+                                {{ form_widget(form.type,{ 'attr': {'class': 'foo'} }) }}
+                                <small id='errorMsg'> {{ form_errors(form.type) }}</small>
+                                <small>{{ form_help(form.type) }}</small>
+                            </div>
+                            <div class="form-control">
+                                <label for="foo">etat</label>
+                                {{ form_widget(form.etat,{ 'attr': {'class': 'foo'} }) }}
+                                <small id='errorMsg'> {{ form_errors(form.etat) }}</small>
+                                <small>{{ form_help(form.etat) }}</small>
+                            </div>
+                            <div class="form-control">
+                                <label for="foo">data</label>
+                                {{ form_widget(form.data,{ 'attr': {'class': 'foo'} }) }}
+                                <small id='errorMsg'> {{ form_errors(form.data) }}</small>
+                                <small>{{ form_help(form.data) }}</small>
+                            </div>
+                            <div class="form-control">
+                                <label for="foo">offre</label>
+                                {{ form_widget(form.offre,{ 'attr': {'class': 'foo'} }) }}
+                                <small id='errorMsg'> {{ form_errors(form.offre) }}</small>
+                                <small>{{ form_help(form.offre) }}</small>
+                            </div>
+                            <div class="form-control">
+                                <label for="foo">transport</label>
+                                {{ form_widget(form.transport,{ 'attr': {'class': 'foo'} }) }}
+                                <small id='errorMsg'> {{ form_errors(form.transport) }}</small>
+                                <small>{{ form_help(form.transport) }}</small>
+                            </div>
+                            <div class="form-control">
+                                <label for="foo">distribution</label>
+                                {{ form_widget(form.distribution,{ 'attr': {'class': 'foo'} }) }}
+                                <small id='errorMsg'> {{ form_errors(form.distribution) }}</small>
+                                <small>{{ form_help(form.distribution) }}</small>
+                            </div>
+                            <div class="form-control">
+                                <label for="foo">rack</label>
+                                {{ form_widget(form.rack,{ 'attr': {'class': 'foo'} }) }}
+                                <small id='errorMsg'> {{ form_errors(form.rack) }}</small>
+                                <small>{{ form_help(form.rack) }}</small>
+                            </div>
+                            <div class="form-control">
+                                <label for="foo">shelf</label>
+                                {{ form_widget(form.shelf,{ 'attr': {'class': 'foo'} }) }}
+                                <small id='errorMsg'> {{ form_errors(form.shelf) }}</small>
+                                <small>{{ form_help(form.shelf) }}</small>
+                            </div>
+                            <div class="form-control">
+                                <label for="foo">slot</label>
+                                {{ form_widget(form.slot,{ 'attr': {'class': 'foo'} }) }}
+                                <small id='errorMsg'> {{ form_errors(form.slot) }}</small>
+                                <small>{{ form_help(form.slot) }}</small>
+                            </div>
+                            <div class="form-control">
+                                <label for="foo">port</label>
+                                {{ form_widget(form.port,{ 'attr': {'class': 'foo'} }) }}
+                                <small id='errorMsg'> {{ form_errors(form.port) }}</small>
+                                <small>{{ form_help(form.port) }}</small>
+                            </div>
+                            <div class="form-control">
+                                <label for="foo">tid</label>
+                                {{ form_widget(form.tid,{ 'attr': {'class': 'foo'} }) }}
+                                <small id='errorMsg'> {{ form_errors(form.tid) }}</small>
+                                <small>{{ form_help(form.tid) }}</small>
+                            </div>
+
+                            {{ form_widget(form.Ajouter,{ 'attr': {'class': 'btn btn-primary'} }) }}
+                            {{ form_end(form) }}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main><!-- End #main -->
+
+{% endblock %}

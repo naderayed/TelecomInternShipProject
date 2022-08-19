@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkFlow</title>
+    <link href="{{ asset('admin/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+
+    <h1>WorkFlow</h1>
+    {{ form_start(form,{'attr': {'novalidate': 'novalidate'}}) }}
+    {{ form_widget(form.my_file,{ 'attr': {'class': 'foo'} }) }}
+    {{ form_widget(form.Ajouter,{ 'attr': {'class': 'foo'} }) }}
+    {{ form_end(form) }}
+    <br>
+    <button id="res1" type="button" class="btn btn-danger"><a style="color: #fff" href="{{ path('deleteAllWorkFlow') }}">Clear Data</a></button>
+    <table class="table table-hover table-dark">
+        <thead>
+        <tr>
+            <th scope="col">nAppel</th>
+            <th scope="col">idContrat</th>
+            <th scope="col">client</th>
+            <th scope="col">natureService</th>
+            <th scope="col">debit</th>
+            <th scope="col">central</th>
+            <th scope="col">fsi</th>
+            <th scope="col">etat</th>
+            <th scope="col">dateMestt</th>
+            <th scope="col">position</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for work in work %}
+            <tr>
+                <td>{{ work.nAppel }}</td>
+                <td>{{ work.idContrat }}</td>
+                <td>{{ work.client }}</td>
+                <td>{{ work.natureService }}</td>
+                <td>{{ work.debit }}</td>
+                <td>{{ work.central }}</td>
+                <td>{{ work.fsi }}</td>
+                <td>{{ work.etat }}</td>
+                <td>{{ work.dateMestt }}</td>
+                <td>{{ work.position }}</td>
+
+
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<button id="res" type="button" class="btn btn-primary"><a style="color: #fff" href="{{ path('landing') }}">Home Page</a></button>
+
+</body>
+<style>
+    body{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{ asset('admin/img/Tunisie-télécom.jpg') }});
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+
+    }
+    #res{
+        position: fixed;
+        right: 0px;
+        top: 800px;
+        font-size: 20px;
+        border: 2px solid  #0076d762;
+        padding-left: 8px;
+        padding-right: 8px;
+        background-color: #0076d7;
+        border-radius: 5px;
+        color:#fff;
+        transition: 0.3ms ease;
+    }
+    #res:hover{
+        margin-right: 0px;
+        padding-left: 25px;
+        padding-right: 25px;
+
+    }
+     #res1{
+           position: fixed;
+           right: 0px;
+           top:750px;
+           font-size: 20px;
+
+       }
+
+    #res1:hover{
+        margin-right: 0px;
+        padding-left: 25px;
+        padding-right: 25px;
+
+    }
+    a{
+        text-decoration: none;
+    }
+    .foo{
+        font-size: 20px;
+        color: white;
+        background-color: #06d7f5;
+        border-radius: 5px;
+        border-color: #06D7F5FF;
+    }
+</style>
+</html>
